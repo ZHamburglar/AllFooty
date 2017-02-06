@@ -6,6 +6,9 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import requireAuth from './components/require_authentication'
 import App from './components/app';
+import League from './components/league';
+import Team from './components/team';
+
 import reducers from './reducers';
 import Resources from './components/resources';
 
@@ -16,6 +19,10 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path='/' component={App}>
         <Route path="resources" component={requireAuth(Resources)} />
+        <Route path="league/:leagueId" component={League}>
+        </Route>
+        <Route path="premier_league/:teamId" component={Team}/>
+
       </Route>
     </Router>
   </Provider>

@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {Link} from 'react-router';
+import {connect} from 'react-redux';
 import * as actions from '../actions'
 
 class Header extends Component {
   authButton() {
-      if (this.props.authenticated) {
-        return <button className="btn btn-primary" onClick={() => this.props.authenticate(false)}>Sign Out</button>
-      }
-      return <button className="btn btn-primary" onClick={() => this.props.authenticate(true)}>Sign In</button>
+    if (this.props.authenticated) {
+      return <button className="btn btn-primary" onClick={() => this.props.authenticate(false)}>Sign Out</button>
+    }
+    return <button className="btn btn-primary" onClick={() => this.props.authenticate(true)}>Sign In</button>
   }
 
   render() {
@@ -24,6 +24,207 @@ class Header extends Component {
           <li className="nav-item">
             {this.authButton()}
           </li>
+          <div className="dropdown">
+            <button className="dropbtn">
+              <li>
+                <Link to="/league/426">Premier League</Link>
+              </li>
+            </button>
+            <div className="dropdown-content">
+              <li>
+                <Link to="/premier_league/66" >AFC Bournemouth</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/57" >Arsenal</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/328" >Burnley</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/61" >Chelsea</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/354" >Crystal Palace</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/62" >Everton</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/322" >Hull City</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/338" >Leicester City</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/64" >Liverpool</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/65" >Manchester City</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/66" >Manchester United</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/343" >Middlesbrough</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/340" >Southampton</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/70" >Stoke City</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/71" >Sunderland</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/72" >Swansea City</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/73" >Tottenham Hotspur</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/346" >Watford</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/74" >West Bromwich Albion</Link>
+              </li>
+              <li>
+                <Link to="/premier_league/563" >West Ham United</Link>
+              </li>
+            </div>
+          </div>
+          <div className="dropdown">
+            <button className="dropbtn">
+              <li>
+                <Link to="/league/436">La Liga</Link>
+              </li>
+            </button>
+            <div className="dropdown-content">
+              <li>
+                <a href="#">Alaves</a>
+              </li>
+              <li>
+                <a href="#">Athletic Bilbao</a>
+              </li>
+              <li>
+                <a href="#">Atletico Madrid</a>
+              </li>
+              <li>
+                <a href="#">Barcelona</a>
+              </li>
+              <li>
+                <a href="#">Celta Vigo</a>
+              </li>
+              <li>
+                <a href="#">Deportivo La Coruna</a>
+              </li>
+              <li>
+                <a href="#">Eibar</a>
+              </li>
+              <li>
+                <a href="#">Espanyol</a>
+              </li>
+              <li>
+                <a href="#">Granada</a>
+              </li>
+              <li>
+                <a href="#">Las Palmas</a>
+              </li>
+              <li>
+                <a href="#">Leganes</a>
+              </li>
+              <li>
+                <a href="#">Malaga</a>
+              </li>
+              <li>
+                <a href="#">Osasuna</a>
+              </li>
+              <li>
+                <a href="#">Real Betis</a>
+              </li>
+              <li>
+                <a href="#">Real Madrid</a>
+              </li>
+              <li>
+                <a href="#">Real Sociedad</a>
+              </li>
+              <li>
+                <a href="#">Sevilla</a>
+              </li>
+              <li>
+                <a href="#">Sporting Gijon</a>
+              </li>
+              <li>
+                <a href="#">Valencia</a>
+              </li>
+              <li>
+                <a href="#">Villarreal</a>
+              </li>
+            </div>
+          </div>
+          <div className="dropdown">
+            <button className="dropbtn">
+              <li>
+                <Link to="/league/430">Bundesliga</Link>
+              </li>
+            </button>
+            <div className="dropdown-content">
+              <li>
+                <a href="#">FC Augsburg</a>
+              </li>
+              <li>
+                <a href="#">Bayer Leverkusen</a>
+              </li>
+              <li>
+                <a href="#">Bayern Munich</a>
+              </li>
+              <li>
+                <a href="#">Borussia Dortmund</a>
+              </li>
+              <li>
+                <a href="#">Borussia Monchengladbach</a>
+              </li>
+              <li>
+                <a href="#">Darmstadt 98</a>
+              </li>
+              <li>
+                <a href="#">Entracht Frankfurt</a>
+              </li>
+              <li>
+                <a href="#">SC Freiburg</a>
+              </li>
+              <li>
+                <a href="#">Hamburger SV</a>
+              </li>
+              <li>
+                <a href="#">Hertha BSC</a>
+              </li>
+              <li>
+                <a href="#">TSG 1899 Hoffenheim</a>
+              </li>
+              <li>
+                <a href="#">FC Ingolstadt</a>
+              </li>
+              <li>
+                <a href="#">1. FC Koln</a>
+              </li>
+              <li>
+                <a href="#">RB Leipzig</a>
+              </li>
+              <li>
+                <a href="#">1. FSV Mainz 05</a>
+              </li>
+              <li>
+                <a href="#">Schalke 04</a>
+              </li>
+              <li>
+                <a href="#">Werder Bremen</a>
+              </li>
+              <li>
+                <a href="#">VfL Wolfsburg</a>
+              </li>
+            </div>
+          </div>
         </ul>
       </nav>
     )
@@ -31,7 +232,7 @@ class Header extends Component {
 }
 
 function mapStateToProps(state) {
-  return { authenticated: state.authenticated }
+  return {authenticated: state.authenticated}
 }
 
 export default connect(mapStateToProps, actions)(Header)
