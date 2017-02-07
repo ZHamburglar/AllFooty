@@ -19,8 +19,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path='/' component={App}>
         <Route path="resources" component={requireAuth(Resources)} />
-        <Route path="league/:leagueId" component={League}>
-        </Route>
+        <Route path="league/:leagueId" component={League} />
         <Route path="premier_league/:teamId" component={Team}/>
         <Route path="la_liga/:teamId" component={Team}/>
         <Route path="bundesliga/:teamId" component={Team}/>

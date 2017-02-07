@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import Request from 'superagent';
 
 
-export default class League extends Component {
+export default class LeagueTable extends Component {
   constructor() {
     super();
     this.state = {};
@@ -12,14 +11,6 @@ export default class League extends Component {
 
   componentWillMount() {
     // Called the first time the component is loaded right before the component is added to the page
-    let leagueIdName = this.props.params.leagueId
-    console.log('teamIdName', leagueIdName);
-    var url="http://api.football-data.org/v1/competitions/"+leagueIdName;
-    Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
-      console.log('response', response.body.caption);
-
-
-    });
   }
 
   componentDidMount() {

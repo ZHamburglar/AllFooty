@@ -32,7 +32,7 @@ class Header extends Component {
             </button>
             <div className="dropdown-content">
               <li>
-                <Link to="/premier_league/66" >AFC Bournemouth</Link>
+                <Link to="/premier_league/1044" >AFC Bournemouth</Link>
               </li>
               <li>
                 <Link to="/premier_league/57" >Arsenal</Link>

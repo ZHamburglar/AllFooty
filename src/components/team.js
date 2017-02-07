@@ -5,9 +5,13 @@ import axios from 'axios';
 
 
 export default class Team extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      soccerdata: '',
+      crestUrl: '',
+      teamId: this.props.params.teamId
+    };
   }
 
 
@@ -18,14 +22,19 @@ export default class Team extends React.Component {
   }
 
   componentDidMount() {
-    let teamIdName = this.props.params.teamId
+
+    this.getTeam();
+  }
+
+  getTeam(){
+    // Called when the props provided to the component are changed
+    let teamIdName = this.state.teamId;
     console.log('teamIdName', teamIdName);
-    // Called after the component has been rendered into the page
     var url = "http://api.football-data.org/v1/teams/" + teamIdName;
     Request.get(url)
       .set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd')
       .then((response) => {
-        console.log('response', response.body.name);
+        console.log('response', response.body);
         this.setState({
           soccerdata: response.body.name,
           crestUrl: response.body.crestUrl
@@ -33,12 +42,17 @@ export default class Team extends React.Component {
       });
   }
 
-  componentWillReceiveProps(nextProps) {
-    // Called when the props provided to the component are changed
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      teamId: newProps.params.teamId
+    })
+
+    this.getTeam()
   }
 
-  componentWillUpdate(nextProps, nextState) {
+  componentWillUpdate() {
     // Called when the props and/or state change
+
   }
 
   componentWillUnmount() {
@@ -54,7 +68,6 @@ export default class Team extends React.Component {
 
     return (
       <div>
-      {this.props.params.teamId}
       This is a soccer team
       <ul>
       {this.state.soccerdata}
