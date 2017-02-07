@@ -22,7 +22,8 @@ ReactDOM.render(
         <Route path="league/:leagueId" component={League}>
         </Route>
         <Route path="premier_league/:teamId" component={Team}/>
-
+        <Route path="la_liga/:teamId" component={Team}/>
+        <Route path="bundesliga/:teamId" component={Team}/>
       </Route>
     </Router>
   </Provider>
