@@ -101,64 +101,64 @@ class Header extends Component {
             </button>
             <div className="dropdown-content">
               <li>
-                <Link to="/la_liga/346">Alaves</Link>
+                <Link to="/la_liga/263">Alaves</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Athletic Bilbao</Link>
+                <Link to="/la_liga/77">Athletic Bilbao</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Atletico Madrid</Link>
+                <Link to="/la_liga/78">Atletico Madrid</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Barcelona</Link>
+                <Link to="/la_liga/81">Barcelona</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Celta Vigo</Link>
+                <Link to="/la_liga/558">Celta Vigo</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Deportivo La Coruna</Link>
+                <Link to="/la_liga/560">Deportivo La Coruna</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Eibar</Link>
+                <Link to="/la_liga/278">Eibar</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Espanyol</Link>
+                <Link to="/la_liga/80">Espanyol</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Granada</Link>
+                <Link to="/la_liga/83">Granada</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Las Palmas</Link>
+                <Link to="/la_liga/275">Las Palmas</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Leganes</Link>
+                <Link to="/la_liga/745">Leganes</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Malaga</Link>
+                <Link to="/la_liga/84">Malaga</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Osasuna</Link>
+                <Link to="/la_liga/79">Osasuna</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Real Betis</Link>
+                <Link to="/la_liga/90">Real Betis</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Real Madrid</Link>
+                <Link to="/la_liga/86">Real Madrid</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Real Sociedad</Link>
+                <Link to="/la_liga/92">Real Sociedad</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Sevilla</Link>
+                <Link to="/la_liga/559">Sevilla</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Sporting Gijon</Link>
+                <Link to="/la_liga/96">Sporting Gijon</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Valencia</Link>
+                <Link to="/la_liga/95">Valencia</Link>
               </li>
               <li>
-                <Link to="/la_liga/346">Villarreal</Link>
+                <Link to="/la_liga/94">Villarreal</Link>
               </li>
             </div>
           </div>
@@ -170,58 +170,58 @@ class Header extends Component {
             </button>
             <div className="dropdown-content">
               <li>
-                <a href="#">FC Augsburg</a>
+                <Link to="/bundesliga/16">FC Augsburg</Link>
               </li>
               <li>
-                <a href="#">Bayer Leverkusen</a>
+                <Link to="/bundesliga/3">Bayer Leverkusen</Link>
               </li>
               <li>
-                <a href="#">Bayern Munich</a>
+                <Link to="/bundesliga/5">Bayern Munich</Link>
               </li>
               <li>
-                <a href="#">Borussia Dortmund</a>
+                <Link to="/bundesliga/4">Borussia Dortmund</Link>
               </li>
               <li>
-                <a href="#">Borussia Monchengladbach</a>
+                <Link to="/bundesliga/18">Borussia Monchengladbach</Link>
               </li>
               <li>
-                <a href="#">Darmstadt 98</a>
+                <Link to="/bundesliga/55">Darmstadt 98</Link>
               </li>
               <li>
-                <a href="#">Entracht Frankfurt</a>
+                <Link to="/bundesliga/19">Entracht Frankfurt</Link>
               </li>
               <li>
-                <a href="#">SC Freiburg</a>
+                <Link to="/bundesliga/17">SC Freiburg</Link>
               </li>
               <li>
-                <a href="#">Hamburger SV</a>
+                <Link to="/bundesliga/7">Hamburger SV</Link>
               </li>
               <li>
-                <a href="#">Hertha BSC</a>
+                <Link to="/bundesliga/9">Hertha BSC</Link>
               </li>
               <li>
-                <a href="#">TSG 1899 Hoffenheim</a>
+                <Link to="/bundesliga/2">TSG 1899 Hoffenheim</Link>
               </li>
               <li>
-                <a href="#">FC Ingolstadt</a>
+                <Link to="/bundesliga/31">FC Ingolstadt</Link>
               </li>
               <li>
-                <a href="#">1. FC Koln</a>
+                <Link to="/bundesliga/1">1. FC Koln</Link>
               </li>
               <li>
-                <a href="#">RB Leipzig</a>
+                <Link to="/bundesliga/721">RB Leipzig</Link>
               </li>
               <li>
-                <a href="#">1. FSV Mainz 05</a>
+                <Link to="/bundesliga/15">1. FSV Mainz 05</Link>
               </li>
               <li>
-                <a href="#">Schalke 04</a>
+                <Link to="/bundesliga/6">Schalke 04</Link>
               </li>
               <li>
-                <a href="#">Werder Bremen</a>
+                <Link to="/bundesliga/12">Werder Bremen</Link>
               </li>
               <li>
-                <a href="#">VfL Wolfsburg</a>
+                <Link to="/bundesliga/11">VfL Wolfsburg</Link>
               </li>
             </div>
           </div>
