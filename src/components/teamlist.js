@@ -46,7 +46,6 @@ export default class TeamList extends Component {
 
   render() {
     var teamsList = _.map(this.props.teams, (team, i) => {
-      console.log({team})
       var teamstring = team._links.self.href
       var parts = teamstring.split("/");
       var result = parts[parts.length - 1];

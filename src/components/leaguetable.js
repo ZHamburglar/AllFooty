@@ -4,7 +4,6 @@ import LeagueTableTeams from './leaguetableteams'
 export default class LeagueTable extends Component {
   constructor() {
     super();
-    this.state = {};
   }
 
   componentWillMount() {
@@ -44,7 +43,7 @@ export default class LeagueTable extends Component {
               <th>Losses</th>
             </tr>
           </thead>
-            <LeagueTableTeams leagueId={this.props.leagueId}></LeagueTableTeams>
+          <LeagueTableTeams leagueId={this.props.leagueId}></LeagueTableTeams>
         </table>
       </div>
     )

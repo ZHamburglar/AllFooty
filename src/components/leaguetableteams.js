@@ -28,13 +28,15 @@ export default class LeagueTableTeams extends Component {
   componentDidMount() {
     // Called after the component has been rendered into the page
     console.log('i mounted');
-    this.getLeague()
+
 
   }
 
   componentWillReceiveProps(nextProps) {
     // Called when the props provided to the component are changed
     console.log('i will receive props');
+    console.log({nextProps})
+    this.getLeague()
   }
 
   componentWillUpdate(nextProps, nextState) {

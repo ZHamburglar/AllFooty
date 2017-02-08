@@ -23,7 +23,6 @@ export default class League extends Component {
   }
   componentWillMount() {
     // Called the first time the component is loaded right before the component is added to the page
-    this.getLeague();
 
 
 
@@ -31,12 +30,13 @@ export default class League extends Component {
 
   componentDidMount() {
     // Called after the component has been rendered into the page
-    this.getLeague();
-
+    this.getLeague()
   }
 
   componentWillReceiveProps(nextProps) {
     // Called when the props provided to the component are changed
+    console.log('hello')
+    this.getLeague()
   }
 
   componentWillUpdate(nextProps, nextState) {
