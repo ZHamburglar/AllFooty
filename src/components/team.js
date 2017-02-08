@@ -1,6 +1,7 @@
 import React from 'react';
 import Request from 'superagent';
-import TeamRoster from './teamroster'
+import TeamRoster from './teamroster';
+import TeamFixtures from './teamfixtures';
 
 
 export default class Team extends React.Component {
@@ -76,6 +77,7 @@ export default class Team extends React.Component {
       </ul>
       <img src={this.state.crestUrl} />
       <TeamRoster teamRosterId={this.props.params.teamId}></TeamRoster>
+      <TeamFixtures teamRosterId={this.props.params.teamId}></TeamFixtures>
       </div>
     )
   }
