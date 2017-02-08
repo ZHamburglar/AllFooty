@@ -7,9 +7,6 @@ import _ from 'lodash';
 export default class TeamList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      teams: ''
-    };
   }
 
 
@@ -20,16 +17,16 @@ export default class TeamList extends Component {
 
   componentDidMount() {
     // Called after the component has been rendered into the page
-    console.log('URL STUFF', this.props.leagueUrlId);
-    let leagueIdAddin = this.props.leagueUrlId;
-    console.log('API Url for Teams: ', leagueIdAddin);
-    var url="http://api.football-data.org/v1/competitions/"+leagueIdAddin+"/teams";
-    Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
-      console.log('response Teams List', response.body.teams);
-      this.setState({
-        teamslist: response.body.teams,
-      })
-    });
+    // console.log('URL STUFF', this.props.leagueUrlId);
+    // let leagueIdAddin = this.props.leagueUrlId;
+    // console.log('API Url for Teams: ', leagueIdAddin);
+    // var url="http://api.football-data.org/v1/competitions/"+leagueIdAddin+"/teams";
+    // Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
+    //   console.log('response Teams List', response.body.teams);
+    //   this.setState({
+    //     teamslist: response.body.teams,
+    //   })
+    // });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -48,11 +45,12 @@ export default class TeamList extends Component {
   }
 
   render() {
-    var teamsList = _.map(this.state.teamslist, (teams, i) => {
-      var teamstring = teams._links.self.href
+    var teamsList = _.map(this.props.teams, (team, i) => {
+      console.log({team})
+      var teamstring = team._links.self.href
       var parts = teamstring.split("/");
       var result = parts[parts.length - 1];
-      return <li key={i}><Link to={"/team/"+result}>{teams.name}</Link></li>
+      return <li key={i}><Link to={"/team/"+result}>{team.name}</Link></li>
     })
     return (
       <ul>

@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 import LeagueListTeams from './leaguelistteams'
+import _ from 'lodash'
 
 class Header extends Component {
   authButton() {
@@ -10,6 +11,12 @@ class Header extends Component {
       return <button className="dropbtn" onClick={() => this.props.authenticate(false)}>Sign Out</button>
     }
     return <button className="dropbtn" onClick={() => this.props.authenticate(true)}>Sign In</button>
+  }
+
+  renderLeagueNav(leagueObject, leagueId) {
+    return <div key={leagueId} className="dropdown">
+      <LeagueListTeams league={leagueObject} leagueId={leagueId} />
+    </div>
   }
 
   render() {
@@ -25,18 +32,7 @@ class Header extends Component {
           <li className="nav-item">
             {this.authButton()}
           </li>
-          <div className="dropdown">
-            <LeagueListTeams leagueId="426" />
-          </div>
-          <div className="dropdown">
-            <LeagueListTeams leagueId="436" />
-          </div>
-          <div className="dropdown">
-            <LeagueListTeams leagueId="430" />
-          </div>
-          <div className="dropdown">
-            <LeagueListTeams leagueId="434" />
-          </div>
+          {_.map(this.props.leagues, (leagueObject, leagueId) => this.renderLeagueNav(leagueObject, leagueId))}
         </ul>
       </nav>
     )
