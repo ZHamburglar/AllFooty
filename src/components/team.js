@@ -1,7 +1,5 @@
 import React from 'react';
-import FootballData from '../api/football-data';
 import Request from 'superagent';
-import axios from 'axios';
 
 
 export default class Team extends React.Component {
@@ -22,14 +20,15 @@ export default class Team extends React.Component {
   }
 
   componentDidMount() {
-
     this.getTeam();
+
   }
 
   getTeam(){
     // Called when the props provided to the component are changed
     let teamIdName = this.state.teamId;
     console.log('teamIdName', teamIdName);
+    console.log("Running 1");
     var url = "http://api.football-data.org/v1/teams/" + teamIdName;
     Request.get(url)
       .set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd')
@@ -42,12 +41,9 @@ export default class Team extends React.Component {
       });
   }
 
-  componentWillReceiveProps(newProps) {
-    this.setState({
-      teamId: newProps.params.teamId
-    })
-
-    this.getTeam()
+  componentWillReceiveProps() {
+    console.log("Running 2");
+    this.getTeam();
   }
 
   componentWillUpdate() {
@@ -57,10 +53,13 @@ export default class Team extends React.Component {
 
   componentWillUnmount() {
     // Called when the component is removed
+    console.log("Running 3");
+    this.getTeam();
   }
 
   updateSearch() {
-    this.search(this.refs.query.value);
+    console.log("Running 4");
+    this.getTeam();
   }
 
 
