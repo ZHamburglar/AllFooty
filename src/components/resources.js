@@ -3,11 +3,11 @@ import React from 'react';
 export default () => {
   return (
     <div>
-      Super Special Recipe
+      My Saved Teams:
       <ul>
-        <li>1 Cup Sugar</li>
-        <li>1 Cup Pepper</li>
-        <li>1 Cup Salt</li>
+        <li>Liverpool</li>
+        <li>Borussia Dortmund</li>
+        <li>Bayern Munich</li>
       </ul>
     </div>
   )
