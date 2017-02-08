@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 import Request from 'superagent';
 import _ from 'lodash';
 
@@ -26,10 +27,8 @@ export default class TeamList extends Component {
     Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
       console.log('response Teams List', response.body);
       this.setState({
-        teams: response.body.teams
+        teamslist: response.body.teams,
       })
-
-
     });
   }
 
@@ -49,12 +48,12 @@ export default class TeamList extends Component {
   }
 
   render() {
-    var teams = _.map(this.state.teams, (teams) => {
-      return <li>{teams.name}</li>
+    var teamsList = _.map(this.state.teamslist, (teams) => {
+      return <li><Link to={"/team/"+teams.name}>{teams.name}</Link></li>
     })
     return (
       <div>
-        <li>{teams}</li>
+        <li>{teamsList}</li>
       </div>
     )
   }
