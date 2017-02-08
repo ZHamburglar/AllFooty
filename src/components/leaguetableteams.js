@@ -5,15 +5,12 @@ import _ from 'lodash';
 export default class LeagueTableTeams extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      teamTable: []
+    };
   }
 
-  componentWillMount() {
-    // Called the first time the component is loaded right before the component is added to the page
-  }
-
-  componentDidMount() {
-    // Called after the component has been rendered into the page
+  getLeague() {
     let leagueTableId = this.props.leagueId;
     http://api.football-data.org/v1/competitions/426/leagueTable
     var url="http://api.football-data.org/v1/competitions/"+leagueTableId+"/leagueTable";
@@ -23,27 +20,40 @@ export default class LeagueTableTeams extends Component {
         teamTable: response.body.standing
       })
     });
+  }
+
+  componentWillMount() {
+    // Called the first time the component is loaded right before the component is added to the page
+  }
+
+  componentDidMount() {
+    // Called after the component has been rendered into the page
+    console.log('i mounted');
+    this.getLeague()
 
   }
 
   componentWillReceiveProps(nextProps) {
     // Called when the props provided to the component are changed
+    console.log('i will receive props');
   }
 
   componentWillUpdate(nextProps, nextState) {
     // Called when the props and/or state change
+    console.log('i will update');
   }
 
   componentWillUnmount() {
     // Called when the component is removed
+    console.log('i will unmount');
   }
 
   updateSearch() {}
 
   render() {
-    var teamTableListOut = _.map(this.state.teamTable, (teams) => {
+    var teamTableListOut = _.map(this.state.teamTable, (teams, i) => {
 
-      return       <tr>
+      return       <tr key={i}>
                     <td>{teams.position}</td>
                     <td>{teams.teamName}</td>
                     <td>{teams.points}</td>

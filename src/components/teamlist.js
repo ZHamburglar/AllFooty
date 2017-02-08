@@ -48,16 +48,16 @@ export default class TeamList extends Component {
   }
 
   render() {
-    var teamsList = _.map(this.state.teamslist, (teams) => {
+    var teamsList = _.map(this.state.teamslist, (teams, i) => {
       var teamstring = teams._links.self.href
       var parts = teamstring.split("/");
       var result = parts[parts.length - 1];
-      return <li><Link to={"/team/"+result}>{teams.name}</Link></li>
+      return <li key={i}><Link to={"/team/"+result}>{teams.name}</Link></li>
     })
     return (
-      <div>
-        <li>{teamsList}</li>
-      </div>
+      <ul>
+        {teamsList}
+      </ul>
     )
   }
 }
