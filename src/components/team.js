@@ -26,9 +26,9 @@ export default class Team extends React.Component {
 
   getTeam(){
     // Called when the props provided to the component are changed
-    let teamIdName = this.state.teamId;
+    let teamIdName = this.props.params.teamId;
     console.log('teamIdName', teamIdName);
-    console.log("Running 1");
+    console.log("Running 1.5");
     var url = "http://api.football-data.org/v1/teams/" + teamIdName;
     Request.get(url)
       .set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd')

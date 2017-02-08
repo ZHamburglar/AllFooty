@@ -34,6 +34,9 @@ class Header extends Component {
           <div className="dropdown">
             <LeagueListTeams leagueId="430">This is the Bundesliga</LeagueListTeams>
           </div>
+          <div className="dropdown">
+            <LeagueListTeams leagueId="434">This is the Bundesliga</LeagueListTeams>
+          </div>
         </ul>
       </nav>
     )
