@@ -26,16 +26,16 @@ class Header extends Component {
             {this.authButton()}
           </li>
           <div className="dropdown">
-            <LeagueListTeams leagueId="426">This is the Bundesliga</LeagueListTeams>
+            <LeagueListTeams leagueId="426" />
           </div>
           <div className="dropdown">
-            <LeagueListTeams leagueId="436">This is the Bundesliga</LeagueListTeams>
+            <LeagueListTeams leagueId="436" />
           </div>
           <div className="dropdown">
-            <LeagueListTeams leagueId="430">This is the Bundesliga</LeagueListTeams>
+            <LeagueListTeams leagueId="430" />
           </div>
           <div className="dropdown">
-            <LeagueListTeams leagueId="434">This is the Bundesliga</LeagueListTeams>
+            <LeagueListTeams leagueId="434" />
           </div>
         </ul>
       </nav>
