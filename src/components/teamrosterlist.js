@@ -2,21 +2,21 @@ import React, {Component} from 'react';
 import Request from 'superagent';
 import _ from 'lodash';
 
-export default class LeagueTableTeams extends Component {
+export default class TeamRosterList extends Component {
   constructor() {
     super();
     this.state = {
-      teamTable: []
+      teamRoster: []
     };
   }
 
   getLeague() {
-    let leagueTableId = this.props.leagueId;
-    var url="http://api.football-data.org/v1/competitions/"+leagueTableId+"/leagueTable";
+    let leagueTableId = this.props.teamRosterId;
+    var url="http://api.football-data.org/v1/teams/"+leagueTableId+"/players";
     Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
-      console.log('League Table: ', response.body.standing);
+      console.log('TeamRoster: ', response.body.players);
       this.setState({
-        teamTable: response.body.standing
+        teamRoster: response.body.players
       })
     });
   }
@@ -50,15 +50,12 @@ export default class LeagueTableTeams extends Component {
   updateSearch() {}
 
   render() {
-    var teamTableListOut = _.map(this.state.teamTable, (teams, i) => {
+    var teamTableListOut = _.map(this.state.teamRoster, (teams, i) => {
 
       return       <tr key={i}>
+                    <td>{teams.jerseyNumber}</td>
+                    <td>{teams.name}</td>
                     <td>{teams.position}</td>
-                    <td>{teams.teamName}</td>
-                    <td>{teams.points}</td>
-                    <td>{teams.wins}</td>
-                    <td>{teams.draws}</td>
-                    <td>{teams.losses}</td>
                   </tr>
     })
     return (

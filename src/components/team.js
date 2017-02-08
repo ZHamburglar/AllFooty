@@ -1,5 +1,6 @@
 import React from 'react';
 import Request from 'superagent';
+import TeamRoster from './teamroster'
 
 
 export default class Team extends React.Component {
@@ -74,6 +75,7 @@ export default class Team extends React.Component {
        <li> Fun! </li>
       </ul>
       <img src={this.state.crestUrl} />
+      <TeamRoster teamRosterId={this.props.params.teamId}></TeamRoster>
       </div>
     )
   }
