@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Request from 'superagent';
+import LeagueTable from './leaguetable';
 
 
 export default class League extends Component {
@@ -9,21 +10,29 @@ export default class League extends Component {
   }
 
 
-
-  componentWillMount() {
-    // Called the first time the component is loaded right before the component is added to the page
+  getLeague(){
+    // Called when the props provided to the component are changed
     let leagueIdName = this.props.params.leagueId
-    console.log('teamIdName', leagueIdName);
     var url="http://api.football-data.org/v1/competitions/"+leagueIdName;
     Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
-      console.log('response', response.body.caption);
+        console.log('response', response.body);
+        this.setState({
+
+        })
+      });
+  }
+  componentWillMount() {
+    // Called the first time the component is loaded right before the component is added to the page
+    this.getLeague();
 
 
-    });
+
   }
 
   componentDidMount() {
     // Called after the component has been rendered into the page
+    this.getLeague();
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -51,6 +60,7 @@ export default class League extends Component {
           <li>Team 2</li>
           <li>Team 3</li>
         </ul>
+        <LeagueTable leagueId={this.props.params.leagueId}></LeagueTable>
       </div>
     )
   }

@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-
+import LeagueTableTeams from './leaguetableteams'
 
 export default class LeagueTable extends Component {
   constructor() {
     super();
     this.state = {};
   }
-
-
 
   componentWillMount() {
     // Called the first time the component is loaded right before the component is added to the page
@@ -29,19 +27,25 @@ export default class LeagueTable extends Component {
     // Called when the component is removed
   }
 
-  updateSearch() {
-  }
+  updateSearch() {}
 
   render() {
     return (
       <div>
-      {this.props.params.leagueId}
-      This is the league etc.
-        <ul>
-          <li>Team 1</li>
-          <li>Team 2</li>
-          <li>Team 3</li>
-        </ul>
+        This is the league etc.
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>Team</th>
+              <th>Points</th>
+              <th>Wins</th>
+              <th>Draws</th>
+              <th>Losses</th>
+            </tr>
+          </thead>
+            <LeagueTableTeams leagueId={this.props.leagueId}></LeagueTableTeams>
+        </table>
       </div>
     )
   }

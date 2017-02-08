@@ -25,7 +25,7 @@ export default class TeamList extends Component {
     console.log('API Url for Teams: ', leagueIdAddin);
     var url="http://api.football-data.org/v1/competitions/"+leagueIdAddin+"/teams";
     Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
-      console.log('response Teams List', response.body);
+      console.log('response Teams List', response.body.teams);
       this.setState({
         teamslist: response.body.teams,
       })
@@ -52,8 +52,6 @@ export default class TeamList extends Component {
       var teamstring = teams._links.self.href
       var parts = teamstring.split("/");
       var result = parts[parts.length - 1];
-      console.log('Result! ', result);
-      console.log('team Links ', teams._links.self.href);
       return <li><Link to={"/team/"+result}>{teams.name}</Link></li>
     })
     return (
