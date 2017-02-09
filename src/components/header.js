@@ -14,9 +14,12 @@ class Header extends Component {
   }
 
   renderLeagueNav(leagueObject, leagueId) {
-    return <div key={leagueId} className="dropdown">
-      <LeagueListTeams league={leagueObject} leagueId={leagueId} />
-    </div>
+    return <li className="nav-item">
+        <div key={leagueId} className="dropdown">
+          <LeagueListTeams league={leagueObject} leagueId={leagueId} />
+        </div>
+      </li>
+
   }
 
   render() {
@@ -26,13 +29,13 @@ class Header extends Component {
           <li className="nav-item">
             <button className="dropbtn"><Link to="/">Home</Link></button>
           </li>
+            {_.map(this.props.leagues, (leagueObject, leagueId) => this.renderLeagueNav(leagueObject, leagueId))}
           <li className="nav-item">
             <button className="dropbtn"><Link to="/resources">My Teams</Link></button>
           </li>
           <li className="nav-item">
             {this.authButton()}
           </li>
-          {_.map(this.props.leagues, (leagueObject, leagueId) => this.renderLeagueNav(leagueObject, leagueId))}
         </ul>
       </nav>
     )

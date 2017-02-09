@@ -23,6 +23,10 @@ export default class App extends Component {
           name: 'Bundesliga',
           teams: []
         },
+        '438': {
+          name: 'Serie A',
+          teams: []
+        },
         '434': {
           name: 'Ligue 1',
           teams: []

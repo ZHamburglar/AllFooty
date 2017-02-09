@@ -32,7 +32,7 @@ export default class TeamRoster extends Component {
   render() {
     return (
       <div>
-        This is the team roster:
+        <h4>Team Roster:</h4>
         <table className="table">
           <thead>
             <tr>

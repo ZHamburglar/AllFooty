@@ -31,7 +31,7 @@ export default class LeagueTable extends Component {
   render() {
     return (
       <div>
-        This is the league etc.
+        <h4>League Table</h4>
         <table className="table">
           <thead>
             <tr>

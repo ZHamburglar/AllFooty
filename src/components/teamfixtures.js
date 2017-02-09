@@ -32,7 +32,7 @@ export default class TeamFixtures extends Component {
   render() {
     return (
       <div>
-        This is the team roster:
+        <h4>Fixtures:</h4>
         <table className="table">
           <thead>
             <tr>

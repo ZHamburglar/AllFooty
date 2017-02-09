@@ -29,6 +29,7 @@
     "axios": "^0.15.3",
     "babel-preset-stage-1": "^6.1.18",
     "bootstrap-hover-dropdown": "^2.2.1",
+    "google-news": "^1.4.6",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",

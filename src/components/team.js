@@ -2,13 +2,14 @@ import React from 'react';
 import Request from 'superagent';
 import TeamRoster from './teamroster';
 import TeamFixtures from './teamfixtures';
+import News from './news'
 
 
 export default class Team extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      soccerdata: '',
+      teamName: '',
       crestUrl: '',
       teamId: this.props.params.teamId
     };
@@ -34,15 +35,15 @@ export default class Team extends React.Component {
     Request.get(url)
       .set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd')
       .then((response) => {
-        console.log('response', response.body);
+        console.log('response team', response.body);
         this.setState({
-          soccerdata: response.body.name,
+          teamName: response.body.name,
           crestUrl: response.body.crestUrl
         })
       });
   }
 
-  componentWillReceiveProps() {
+  componentWillReceiveProps(nextProps) {
     console.log("Running 2");
     this.getTeam();
   }
@@ -55,12 +56,10 @@ export default class Team extends React.Component {
   componentWillUnmount() {
     // Called when the component is removed
     console.log("Running 3");
-    this.getTeam();
   }
 
   updateSearch() {
     console.log("Running 4");
-    this.getTeam();
   }
 
 
@@ -68,16 +67,24 @@ export default class Team extends React.Component {
 
     return (
       <div>
-      This is a soccer team
-      <ul>
-      {this.state.soccerdata}
-       <li> Soccer! </li>
-       <li> Is! </li>
-       <li> Fun! </li>
-      </ul>
-      <img src={this.state.crestUrl} />
-      <TeamRoster teamRosterId={this.props.params.teamId}></TeamRoster>
-      <TeamFixtures teamRosterId={this.props.params.teamId}></TeamFixtures>
+        <div className="row">
+          {this.state.teamName}
+          <img className="teamimage" src={this.state.crestUrl} />
+        </div>
+
+        <div className="row">
+          <div className="col-xs-6 col-md-4">
+            <TeamRoster teamRosterId={this.props.params.teamId}></TeamRoster>
+          </div>
+          <div className="col-xs-6 col-md-4">
+            <News></News>
+          </div>
+          <div className="col-xs-6 col-md-4">
+            <TeamFixtures teamRosterId={this.props.params.teamId}></TeamFixtures>
+          </div>
+
+        </div>
+
       </div>
     )
   }

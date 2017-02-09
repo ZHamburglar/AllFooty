@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Request from 'superagent';
 import LeagueTable from './leaguetable';
+import News from './news'
 
 
 export default class League extends Component {
@@ -54,13 +55,17 @@ export default class League extends Component {
     return (
       <div>
       {this.props.params.leagueId}
-      This is the league etc.
-        <ul>
-          <li>Team 1</li>
-          <li>Team 2</li>
-          <li>Team 3</li>
-        </ul>
-        <LeagueTable leagueId={this.props.params.leagueId}></LeagueTable>
+      <div className="row">
+        <div className="col-xs-6 col-md-6 col-lg-6">
+          <News></News>
+        </div>
+        <div className="col-xs-6 col-md-6 col-lg-6">
+          <LeagueTable leagueId={this.props.params.leagueId}></LeagueTable>
+        </div>
+
+      </div>
+
+
       </div>
     )
   }
