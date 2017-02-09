@@ -8,9 +8,9 @@ li {
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #cccccc;
     color: white;
-    padding: 16px;
+    padding: 14px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -26,7 +26,8 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #cccccc;
+
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -41,7 +42,9 @@ li {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #808080
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -50,7 +53,7 @@ li {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #808080;
 }
 
 .teamimage {
@@ -63,7 +66,7 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top:0;
+  top: 0;
   bottom:0;
   right:0;
   left:0;
@@ -72,4 +75,10 @@ li {
 
 nav {
   background-color: #cccccc;
+  height: 52px;
+}
+
+.navbar {
+    position: relative;
+    padding: 0rem 0rem;
 }

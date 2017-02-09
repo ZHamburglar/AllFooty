@@ -7,7 +7,8 @@ import News from './news'
 export default class League extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+    };
   }
 
 
@@ -16,8 +17,9 @@ export default class League extends Component {
     let leagueIdName = this.props.params.leagueId
     var url="http://api.football-data.org/v1/competitions/"+leagueIdName;
     Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
-        console.log('response', response.body);
+        console.log('response for league', response.body);
         this.setState({
+          leagueName: response.body.caption
 
         })
       });
@@ -42,6 +44,7 @@ export default class League extends Component {
 
   componentWillUpdate(nextProps, nextState) {
     // Called when the props and/or state change
+
   }
 
   componentWillUnmount() {
@@ -54,7 +57,8 @@ export default class League extends Component {
   render() {
     return (
       <div>
-      {this.props.params.leagueId}
+      {/*this.props.params.leagueId*/}
+      <h1>{this.state.leagueName}</h1>
       <div className="row">
         <div className="col-xs-6 col-md-6 col-lg-6">
           <News></News>
