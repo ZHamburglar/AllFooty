@@ -57,3 +57,19 @@ li {
   height: 100px;
   width: 100px;
 }
+
+.main {
+  background-image: url("/src/images/soccerfield.jpg");;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  overflow:hidden;
+  }
+
+nav {
+  background-color: #cccccc;
+}

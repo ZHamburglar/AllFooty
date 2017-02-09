@@ -61,9 +61,11 @@ export default class App extends Component {
       })
     }
     return (
-      <div>
+      <div className="background">
         <Header leagues={this.state.leagues} />
-        {this.props.children }
+        <div className="container">
+          {this.props.children }
+        </div>
       </div>
     );
   }

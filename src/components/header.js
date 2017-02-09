@@ -27,7 +27,7 @@ class Header extends Component {
       <nav className="navbar navbar-light">
         <ul className="nav navbar-nav">
           <li className="nav-item">
-            <button className="dropbtn"><Link to="/">Home</Link></button>
+            <button className="dropbtn"><Link to="/home">Home</Link></button>
           </li>
             {_.map(this.props.leagues, (leagueObject, leagueId) => this.renderLeagueNav(leagueObject, leagueId))}
           <li className="nav-item">
