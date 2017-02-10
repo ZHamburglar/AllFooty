@@ -52,7 +52,7 @@ export default class TeamList extends Component {
       return <li key={i}><Link to={"/team/"+result}>{team.name}</Link></li>
     })
     return (
-      <div className="dropdown-content">
+      <div className="dropdown-content dropdownscroll">
         {teamsList}
       </div>
     )

@@ -162,3 +162,16 @@ table.table td span {
    text-align: center;
    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
  }
+
+ .nextgame {
+   font-size: 24px;
+   position: absolute;
+   z-index: 1;
+   top: 170px;
+   left: 968px;
+ }
+
+ .dropdownscroll {
+   overflow: scroll;
+   height: 600px;
+ }

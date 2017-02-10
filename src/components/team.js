@@ -72,40 +72,16 @@ export default class Team extends React.Component {
     updateSearch() {}
 
     render() {
-      /*
-      var dateString = this.state.isoTime;
-      var ISO_8601_re = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d{2}))?(Z|[\+-]\d{2}(?::\d{2})?)$/,
-        m = dateString.match(ISO_8601_re);
-      var year = m[1],
-        month = +m[2],
-        dayOfMonth = +m[3],
-        hour = +m[4],
-        minute = +m[5],
-        second = +m[6],
-        ms = +m[7], // +'' === 0
-        timezone = m[8];
-      if (timezone === 'Z')
-        timezone = 0;
-      else
-        timezone = timezone.split(':'),
-        timezone = +(timezone[0][0] + '1') * (60 * (+ timezone[0].slice(1)) + (+ timezone[1] || 0));
-      // timezone is now minutes
-      // your prefered way to construct
-      var myDate = new Date();
-      myDate.setUTCFullYear(year);
-      myDate.setUTCMonth(month - 1);
-      myDate.setUTCDate(dayOfMonth);
-      myDate.setUTCHours(hour);
-      myDate.setUTCMinutes(minute + timezone); // timezone offset set here, after hours
-      myDate.setUTCSeconds(second);
-      myDate.setUTCMilliseconds(ms);
-      console.log(myDate); //
-      */
+      var theTime = moment(this.state.isoTime.date).format('LLL')
+      console.log('The Time Fixed', theTime);
       return (
         <div>
           <div className="row teamtitleline">
             {this.state.teamName}
             <img className="teamimage" src={this.state.crestUrl}/>
+            <div className="nextgame">
+              <div>Next Game: {theTime}</div>
+            </div>
           </div>
 
           <div className="row">
