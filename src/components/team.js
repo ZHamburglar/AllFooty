@@ -73,14 +73,14 @@ export default class Team extends React.Component {
         </div>
 
         <div className="row">
-          <div className="col-xs-6 col-md-4">
+          <div className="col-xs-6 col-md-4 col-lg-4">
             <TeamRoster teamRosterId={this.props.params.teamId}></TeamRoster>
           </div>
-          <div className="col-xs-6 col-md-4">
+          <div className="col-xs-6 col-md-4 col-lg-4">
             <News></News>
           </div>
-          <div className="col-xs-6 col-md-4">
-            <TeamFixtures teamRosterId={this.props.params.teamId}></TeamFixtures>
+          <div className="col-xs-6 col-md-4 col-lg-4">
+            <TeamFixtures teamRosterId={this.props.params.teamId} teamName={this.state.teamName}></TeamFixtures>
           </div>
 
         </div>

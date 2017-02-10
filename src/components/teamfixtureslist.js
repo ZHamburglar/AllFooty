@@ -51,8 +51,25 @@ export default class TeamFixturesList extends Component {
 
   render() {
     var teamTableListOut = _.map(this.state.teamFixtures, (teams, i) => {
+      console.log('props team name', this.props.teamName);
+      if (teams.result.goalsHomeTeam > teams.result.goalsAwayTeam && this.props.teamName == teams.homeTeamName) {
+        var tablecolor
+        var tablecolor = "green"
+      } else if (teams.result.goalsAwayTeam > teams.result.goalsHomeTeam && this.props.teamName == teams.homeTeamName) {
+        var tablecolor
+        var tablecolor = "red"
+      } else if (teams.result.goalsAwayTeam > teams.result.goalsHomeTeam && this.props.teamName == teams.awayTeamName) {
+        var tablecolor
+        var tablecolor = "green"
+      } else if (teams.result.goalsHomeTeam > teams.result.goalsAwayTeam && this.props.teamName == teams.awayTeamName) {
+        var tablecolor
+        var tablecolor = "red"
+      } else if (teams.result.goalsHomeTeam == teams.result.goalsAwayTeam && teams.result.goalsAwayTeam != null) {
+        var tablecolor
+        var tablecolor = "yellow"
+      }
 
-      return       <tr key={i}>
+      return       <tr key={i} className={tablecolor}>
                     <td>{teams.matchday}</td>
                     <td>{teams.homeTeamName}</td>
                     <td>{teams.result.goalsHomeTeam}</td>

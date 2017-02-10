@@ -38,13 +38,13 @@ export default class TeamFixtures extends Component {
             <thead>
               <tr>
                 <th>Match Day</th>
-                <th>Home Team</th>
-                <th>Home Score</th>
-                <th>Away Team</th>
-                <th>Away Score</th>
+                <th>Home Team:</th>
+                <th>Score</th>
+                <th>Away Team:</th>
+                <th>Score</th>
               </tr>
             </thead>
-              <TeamFixturesList teamRosterId={this.props.teamRosterId}></TeamFixturesList>
+              <TeamFixturesList teamRosterId={this.props.teamRosterId} teamName={this.props.teamName}></TeamFixturesList>
           </table>
         </div>
 
