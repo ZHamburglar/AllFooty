@@ -61,12 +61,12 @@ export default class LeagueTableTeams extends Component {
         var tablecolor = "europe"
       }
       return       <tr key={i} className={tablecolor}>
-                    <td>{teams.position}</td>
-                    <td>{teams.teamName}</td>
-                    <td>{teams.points}</td>
-                    <td>{teams.wins}</td>
-                    <td>{teams.draws}</td>
-                    <td>{teams.losses}</td>
+                    <td><span>{teams.position}</span></td>
+                    <td><span>{teams.teamName}</span></td>
+                    <td><span>{teams.points}</span></td>
+                    <td><span>{teams.wins}</span></td>
+                    <td><span>{teams.draws}</span></td>
+                    <td><span>{teams.losses}</span></td>
                   </tr>
     })
     return (

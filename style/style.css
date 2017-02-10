@@ -9,9 +9,11 @@ li {
 /* Dropdown Button */
 .dropbtn {
     background-color: #cccccc;
+    font-family: 'Amatic SC', cursive;
+
     color: white;
-    padding: 14px;
-    font-size: 16px;
+    padding: 6px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
 }
@@ -75,10 +77,41 @@ li {
 
 nav {
   background-color: #cccccc;
-  height: 52px;
+  height: 60px;
 }
 
 .navbar {
     position: relative;
     padding: 0rem 0rem;
 }
+p, h4, h1 {
+  color: white;
+}
+
+.allfootyicon {
+  height: 52px;
+  width: 52px;
+}
+
+table.table {
+  background-color: white;
+  opacity: .5;
+}
+table.table td span {
+/*   opacity: 1;
+ */}
+
+ .allfootyhome {
+   color: white;
+   font-size: 120px;
+   text-align: center;
+   font-family: 'Bahiana', cursive;
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
+ }
+
+ .allfootyhomelogo {
+   position: relative;
+   top: -30px;
+   text-align: center;
+ }

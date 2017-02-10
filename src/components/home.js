@@ -42,8 +42,13 @@ export default class Home extends React.Component {
   render() {
 
     return (
-      <div>
-        Hello there
+      <div className="container">
+        <div className="allfootyhome">
+          AllFooty
+        </div>
+        <div className="allfootyhomelogo">
+          <img className="" src="/src/images/all-footy-logo.png" alt="hello.jpg"/>
+        </div>
       </div>
     )
   }

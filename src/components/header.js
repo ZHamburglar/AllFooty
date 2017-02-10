@@ -23,19 +23,11 @@ class Header extends Component {
   }
 
   render() {
-    return (
-      <nav className=" navbar-light">
-        <ul className="nav navbar-nav">
-          <li className="nav-item">
-              <div className="dropdown">
-                <button className="dropbtn">
-                  <li>
-                    <Link to="/home">Home</Link>
-                  </li>
-                </button>
-              </div>
-          </li>
 
+    return (
+      <nav className="navbar-light">
+        <ul className="nav navbar-nav">
+            <Link to="/home"><img className="allfootyicon" src="/src/images/allfootyicon.png" alt="hello.jpg"/></Link>
             {_.map(this.props.leagues, (leagueObject, leagueId) => this.renderLeagueNav(leagueObject, leagueId))}
 
           <li className="nav-item">
