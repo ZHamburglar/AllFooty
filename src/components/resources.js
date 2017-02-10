@@ -2,13 +2,13 @@ import React from 'react';
 
 export default () => {
   return (
-    <div>
+    <div className="teamtitleline">
       My Saved Teams:
-      <ul>
-        <li>Liverpool</li>
-        <li>Borussia Dortmund</li>
-        <li>Bayern Munich</li>
-      </ul>
+      <ol>
+        <li className="newstitle">Liverpool</li>
+        <li className="newstitle">Borussia Dortmund</li>
+        <li className="newstitle">Bayern Munich</li>
+      </ol>
     </div>
   )
 }

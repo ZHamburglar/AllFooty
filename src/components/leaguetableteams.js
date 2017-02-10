@@ -53,10 +53,23 @@ export default class LeagueTableTeams extends Component {
 
   render() {
     var teamTableListOut = _.map(this.state.teamTable, (teams, i) => {
-      if (teams.position >= 18) {
+      console.log('this param', this.props.leagueId);
+      if (teams.position >= 16 && this.props.leagueId == 430) {
         var tablecolor
         var tablecolor = "relegation"
-      } else if (teams.position <=3) {
+      } else if (teams.position >= 18 && this.props.leagueId == 436) {
+        var tablecolor
+        var tablecolor = "relegation"
+      } else if (teams.position >= 18 && this.props.leagueId == 426) {
+        var tablecolor
+        var tablecolor = "relegation"
+      }else if (teams.position >= 18 && this.props.leagueId == 438) {
+        var tablecolor
+        var tablecolor = "relegation"
+      }else if (teams.position >= 18 && this.props.leagueId == 434) {
+        var tablecolor
+        var tablecolor = "relegation"
+      }else if (teams.position <=3) {
         var tablecolor
         var tablecolor = "europe"
       } else if (teams.position === 4) {

@@ -136,7 +136,13 @@ table.table td span {
  }
 
  tr.europeplayoff {
-   background-color: #ced200o;
+   background-color: #ced200;
+   color: white;
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+ }
+
+ tr.relegation {
+   background-color: #be0000;
    color: white;
    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
  }
