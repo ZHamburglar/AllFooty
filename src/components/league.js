@@ -38,7 +38,6 @@ export default class League extends Component {
 
   componentWillReceiveProps(nextProps) {
     // Called when the props provided to the component are changed
-    console.log('hello')
     this.getLeague()
   }
 

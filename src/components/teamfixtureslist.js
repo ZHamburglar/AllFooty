@@ -14,7 +14,7 @@ export default class TeamFixturesList extends Component {
     let leagueTableId = this.props.teamRosterId;
     var url="http://api.football-data.org/v1/teams/"+leagueTableId+"/fixtures";
     Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
-      console.log('TeamFixtures: ', response.body);
+      /*console.log('TeamFixtures: ', response.body);*/
       this.setState({
         teamFixtures: response.body.fixtures
       })

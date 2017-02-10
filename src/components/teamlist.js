@@ -49,12 +49,12 @@ export default class TeamList extends Component {
       var teamstring = team._links.self.href
       var parts = teamstring.split("/");
       var result = parts[parts.length - 1];
-      return <div key={i}><Link to={"/team/"+result}>{team.name}</Link></div>
+      return <li key={i}><Link to={"/team/"+result}>{team.name}</Link></li>
     })
     return (
-      <ol>
+      <div className="dropdown-content">
         {teamsList}
-      </ol>
+      </div>
     )
   }
 }

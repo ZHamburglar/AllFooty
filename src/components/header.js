@@ -28,7 +28,8 @@ class Header extends Component {
       <nav className="navbar-light">
         <ul className="nav navbar-nav">
             <Link to="/home"><img className="allfootyicon" src="/src/images/allfootyicon.png" alt="hello.jpg"/></Link>
-            {_.map(this.props.leagues, (leagueObject, leagueId) => this.renderLeagueNav(leagueObject, leagueId))}
+
+          {_.map(this.props.leagues, (leagueObject, leagueId) => this.renderLeagueNav(leagueObject, leagueId))}
 
           <li className="nav-item">
               <div className="dropdown">

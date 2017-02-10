@@ -14,7 +14,7 @@ export default class LeagueTableTeams extends Component {
     let leagueTableId = this.props.leagueId;
     var url="http://api.football-data.org/v1/competitions/"+leagueTableId+"/leagueTable";
     Request.get(url).set('X-Auth-Token', '8921bea73c794f8b848353c45f0eeebd').then((response) => {
-      console.log('League Table: ', response.body.standing);
+      /*console.log('League Table: ', response.body.standing);*/
       this.setState({
         teamTable: response.body.standing
       })
@@ -27,33 +27,27 @@ export default class LeagueTableTeams extends Component {
 
   componentDidMount() {
     // Called after the component has been rendered into the page
-    console.log('i mounted');
 
 
   }
 
   componentWillReceiveProps(nextProps) {
     // Called when the props provided to the component are changed
-    console.log('i will receive props');
-    console.log({nextProps})
     this.getLeague()
   }
 
   componentWillUpdate(nextProps, nextState) {
     // Called when the props and/or state change
-    console.log('i will update');
   }
 
   componentWillUnmount() {
     // Called when the component is removed
-    console.log('i will unmount');
   }
 
   updateSearch() {}
 
   render() {
     var teamTableListOut = _.map(this.state.teamTable, (teams, i) => {
-      console.log('this param', this.props.leagueId);
       if (teams.position >= 16 && this.props.leagueId == 430) {
         var tablecolor
         var tablecolor = "red"
