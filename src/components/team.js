@@ -17,10 +17,6 @@ export default class Team extends React.Component {
     };
   }
 
-  componentWillMount() {
-    // Called the first time the component is loaded right before the component is added to the page
-
-  }
 
   componentDidMount() {
     this.getTeam();
@@ -59,17 +55,6 @@ export default class Team extends React.Component {
       this.getTeam();
       this.nextGame();
     }
-
-    componentWillUpdate() {
-      // Called when the props and/or state change
-
-    }
-
-    componentWillUnmount() {
-      // Called when the component is removed
-    }
-
-    updateSearch() {}
 
     render() {
       var theTime = moment(this.state.isoTime.date).format('LLL')

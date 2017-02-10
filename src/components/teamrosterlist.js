@@ -20,29 +20,11 @@ export default class TeamRosterList extends Component {
     });
   }
 
-  componentWillMount() {
-    // Called the first time the component is loaded right before the component is added to the page
-  }
-
   componentDidMount() {
     // Called after the component has been rendered into the page
     this.getLeague()
-
   }
 
-  componentWillReceiveProps(nextProps) {
-    // Called when the props provided to the component are changed
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    // Called when the props and/or state change
-  }
-
-  componentWillUnmount() {
-    // Called when the component is removed
-  }
-
-  updateSearch() {}
 
   render() {
     var teamTableListOut = _.map(this.state.teamRoster, (teams, i) => {

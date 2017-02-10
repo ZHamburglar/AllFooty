@@ -21,33 +21,11 @@ export default class TeamFixturesList extends Component {
     });
   }
 
-  componentWillMount() {
-    // Called the first time the component is loaded right before the component is added to the page
-  }
 
   componentDidMount() {
     // Called after the component has been rendered into the page
-    console.log('i mounted');
     this.getLeague()
-
   }
-
-  componentWillReceiveProps(nextProps) {
-    // Called when the props provided to the component are changed
-    console.log('i will receive props');
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    // Called when the props and/or state change
-    console.log('i will update');
-  }
-
-  componentWillUnmount() {
-    // Called when the component is removed
-    console.log('i will unmount');
-  }
-
-  updateSearch() {}
 
   render() {
     var teamTableListOut = _.map(this.state.teamFixtures, (teams, i) => {
