@@ -72,11 +72,11 @@ export default class Team extends React.Component {
     updateSearch() {}
 
     render() {
-      2017-02-11T12:30:00Z
+      /*
       var dateString = this.state.isoTime;
       var ISO_8601_re = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d{2}))?(Z|[\+-]\d{2}(?::\d{2})?)$/,
         m = dateString.match(ISO_8601_re);
-      var year = +m[1],
+      var year = m[1],
         month = +m[2],
         dayOfMonth = +m[3],
         hour = +m[4],
@@ -99,8 +99,8 @@ export default class Team extends React.Component {
       myDate.setUTCMinutes(minute + timezone); // timezone offset set here, after hours
       myDate.setUTCSeconds(second);
       myDate.setUTCMilliseconds(ms);
-      console.log(myDate); // Tue Jan 08 2013 17:16:36 GMT+0000 (GMT Standard Time)
-
+      console.log(myDate); //
+      */
       return (
         <div>
           <div className="row teamtitleline">
