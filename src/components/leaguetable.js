@@ -31,20 +31,22 @@ export default class LeagueTable extends Component {
   render() {
     return (
       <div>
-        <h4>League Table</h4>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Position</th>
-              <th>Team</th>
-              <th>Points</th>
-              <th>Wins</th>
-              <th>Draws</th>
-              <th>Losses</th>
-            </tr>
-          </thead>
-          <LeagueTableTeams leagueId={this.props.leagueId}></LeagueTableTeams>
-        </table>
+        <h4 className="leaguetabletitle">League Table</h4>
+        <div className="tablescroll">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Team</th>
+                <th>Points</th>
+                <th>Wins</th>
+                <th>Draws</th>
+                <th>Losses</th>
+              </tr>
+            </thead>
+            <LeagueTableTeams leagueId={this.props.leagueId}></LeagueTableTeams>
+          </table>
+        </div>
       </div>
     )
   }

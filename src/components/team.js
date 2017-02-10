@@ -67,7 +67,7 @@ export default class Team extends React.Component {
 
     return (
       <div>
-        <div className="row">
+        <div className="row teamtitleline">
           {this.state.teamName}
           <img className="teamimage" src={this.state.crestUrl} />
         </div>

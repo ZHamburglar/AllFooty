@@ -32,21 +32,22 @@ export default class TeamFixtures extends Component {
   render() {
     return (
       <div>
-        <h4>Fixtures:</h4>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Match Day</th>
-              <th>Home Team</th>
-              <th>Home Score</th>
-              <th>Away Team</th>
-              <th>Away Score</th>
+        <h4 className="teamfixturestitle">Fixtures:</h4>
+        <div className="tablescroll">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Match Day</th>
+                <th>Home Team</th>
+                <th>Home Score</th>
+                <th>Away Team</th>
+                <th>Away Score</th>
+              </tr>
+            </thead>
+              <TeamFixturesList teamRosterId={this.props.teamRosterId}></TeamFixturesList>
+          </table>
+        </div>
 
-
-            </tr>
-          </thead>
-            <TeamFixturesList teamRosterId={this.props.teamRosterId}></TeamFixturesList>
-        </table>
       </div>
     )
   }

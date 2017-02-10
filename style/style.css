@@ -59,8 +59,8 @@ li {
 }
 
 .teamimage {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
 }
 
 .main {
@@ -96,6 +96,12 @@ p, h4, h1 {
 table.table {
   background-color: white;
   opacity: .5;
+  box-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.tablescroll {
+  overflow: scroll;
+  height: 550px;
 }
 table.table td span {
 /*   opacity: 1;
@@ -114,4 +120,39 @@ table.table td span {
    position: relative;
    top: -30px;
    text-align: center;
+ }
+
+ .leaguetitleline, .teamtitleline {
+   color: white;
+   font-family: 'Bahiana', cursive;
+   font-size: 90px;
+   text-align: center;
+ }
+
+ tr.europe {
+   background-color: green;
+   color: white;
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+ }
+
+ tr.europeplayoff {
+   background-color: #ced200o;
+   color: white;
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+ }
+
+ .newsarticletitle {
+   color: white;
+   font-family: 'Bahiana', cursive;
+   font-size: 45px;
+   text-align: center;
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+ }
+
+ .newstitle, .leaguetabletitle, .teamrostertitle, .teamfixturestitle {
+   color: white;
+   font-family: 'Bahiana', cursive;
+   font-size: 60px;
+   text-align: center;
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
  }

@@ -32,17 +32,19 @@ export default class TeamRoster extends Component {
   render() {
     return (
       <div>
-        <h4>Team Roster:</h4>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Number</th>
-              <th>Name</th>
-              <th>Position</th>
-            </tr>
-          </thead>
-            <TeamRosterList teamRosterId={this.props.teamRosterId}></TeamRosterList>
-        </table>
+        <h4 className="teamrostertitle">Team Roster:</h4>
+        <div className="tablescroll">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Position</th>
+              </tr>
+            </thead>
+              <TeamRosterList teamRosterId={this.props.teamRosterId}></TeamRosterList>
+          </table>
+        </div>
       </div>
     )
   }

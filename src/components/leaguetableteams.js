@@ -56,9 +56,12 @@ export default class LeagueTableTeams extends Component {
       if (teams.position >= 18) {
         var tablecolor
         var tablecolor = "relegation"
-      } else if (teams.position <=4) {
+      } else if (teams.position <=3) {
         var tablecolor
         var tablecolor = "europe"
+      } else if (teams.position === 4) {
+        var tablecolor
+        var tablecolor = "europeplayoff"
       }
       return       <tr key={i} className={tablecolor}>
                     <td><span>{teams.position}</span></td>

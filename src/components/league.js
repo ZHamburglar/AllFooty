@@ -58,7 +58,7 @@ export default class League extends Component {
     return (
       <div>
       {/*this.props.params.leagueId*/}
-      <h1>{this.state.leagueName}</h1>
+      <h1 className="leaguetitleline">{this.state.leagueName}</h1>
       <div className="row">
         <div className="col-xs-6 col-md-6 col-lg-6">
           <News></News>
